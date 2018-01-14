@@ -3,7 +3,7 @@ package com.java.webdev.DTO;
 import java.io.Serializable;
 import java.util.Date;
 
-public class MUsersDTO implements Serializable{
+public class MUserDTO implements Serializable{
   private int user_id;
   private String address;
   private int created_by;
@@ -15,13 +15,13 @@ public class MUsersDTO implements Serializable{
   private String strLast_update;
   private String password;
   private String position;
-  private int update_by;
+  private int updated_by;
   private String user_name;
   private int workstation_id;
   private MWorkstationDTO mWorkstation;
 
-  public MUsersDTO(){}
-  public MUsersDTO(int user_id,
+  public MUserDTO(){}
+  public MUserDTO(int user_id,
                   String user_name,
                   String password,
                   String address,
@@ -29,7 +29,7 @@ public class MUsersDTO implements Serializable{
                   String divisi,
                   String flag,
                   int workstation_id,
-                  int update_by,
+                  int updated_by,
                   Date last_update,
                   Date created_date,
                   String strLast_update,
@@ -43,7 +43,7 @@ public class MUsersDTO implements Serializable{
     this.divisi = divisi;
     this.flag = flag;
     this.workstation_id = workstation_id;
-    this.update_by = update_by;
+    this.updated_by = updated_by;
     this.last_update = last_update;
     this.created_date = created_date;
     this.strLast_update = strLast_update;
@@ -139,12 +139,12 @@ public class MUsersDTO implements Serializable{
     this.position = position;
   }
 
-  public int getUpdate_by() {
-    return update_by;
+  public int getUpdated_by() {
+    return updated_by;
   }
 
-  public void setUpdate_by(int update_by) {
-    this.update_by = update_by;
+  public void setUpdated_by(int updated_by) {
+    this.updated_by = updated_by;
   }
 
   public String getUser_name() {

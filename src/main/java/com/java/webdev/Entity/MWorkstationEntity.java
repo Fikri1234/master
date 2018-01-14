@@ -12,9 +12,9 @@ public class MWorkstationEntity {
     private String workstation;
     private int workstationId;
     private String flag;
-    private Integer updateBy;
     private Date lastUpdate;
     private Date createdDate;
+    private Integer updatedBy;
     private Integer createdBy;
 
     @Basic
@@ -48,13 +48,13 @@ public class MWorkstationEntity {
     }
 
     @Basic
-    @Column(name = "UPDATE_BY")
-    public Integer getUpdateBy() {
-        return updateBy;
+    @Column(name = "UPDATED_BY")
+    public Integer getUpdatedBy() {
+        return updatedBy;
     }
 
-    public void setUpdateBy(Integer updateBy) {
-        this.updateBy = updateBy;
+    public void setUpdatedBy(Integer updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
     @Basic
@@ -97,7 +97,7 @@ public class MWorkstationEntity {
         if (workstationId != that.workstationId) return false;
         if (workstation != null ? !workstation.equals(that.workstation) : that.workstation != null) return false;
         if (flag != null ? !flag.equals(that.flag) : that.flag != null) return false;
-        if (updateBy != null ? !updateBy.equals(that.updateBy) : that.updateBy != null) return false;
+        if (updatedBy != null ? !updatedBy.equals(that.updatedBy) : that.updatedBy != null) return false;
         if (lastUpdate != null ? !lastUpdate.equals(that.lastUpdate) : that.lastUpdate != null) return false;
         if (createdDate != null ? !createdDate.equals(that.createdDate) : that.createdDate != null) return false;
         if (createdBy != null ? !createdBy.equals(that.createdBy) : that.createdBy != null) return false;
@@ -110,7 +110,7 @@ public class MWorkstationEntity {
         int result = workstation != null ? workstation.hashCode() : 0;
         result = 31 * result + workstationId;
         result = 31 * result + (flag != null ? flag.hashCode() : 0);
-        result = 31 * result + (updateBy != null ? updateBy.hashCode() : 0);
+        result = 31 * result + (updatedBy != null ? updatedBy.hashCode() : 0);
         result = 31 * result + (lastUpdate != null ? lastUpdate.hashCode() : 0);
         result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
         result = 31 * result + (createdBy != null ? createdBy.hashCode() : 0);

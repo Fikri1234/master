@@ -10,9 +10,9 @@ public class MWorkstationDTO implements Serializable{
   private String flag;
   private Date last_update;
   private Date created_date;
-  private int update_by;
+  private int updated_by;
   private int created_by;
-  private String updateByName;
+  private String updatedByName;
   private String createdByName;
 
   public MWorkstationDTO(){}
@@ -23,27 +23,27 @@ public class MWorkstationDTO implements Serializable{
           String flag,
           Date last_update,
           Date created_date,
-          int update_by,
+          int updated_by,
           int created_by,
-          String updateByName,
+          String updatedByName,
           String createdByName){
     this.workstation = workstation;
     this.workstation_id = workstation_id;
     this.flag = flag;
     this.last_update = last_update;
     this.created_date = created_date;
-    this.update_by = update_by;
+    this.updated_by = updated_by;
     this.created_by = created_by;
-    this.updateByName = updateByName;
+    this.updatedByName = updatedByName;
     this.createdByName = createdByName;
   }
 
   public MWorkstationDTO (
           String workstation,
-          String updateByName,
+          String updatedByName,
           String createdByName){
      this.workstation = workstation;
-     this.updateByName = updateByName;
+     this.updatedByName = updatedByName;
      this.createdByName = createdByName;
   }
 
@@ -87,12 +87,12 @@ public class MWorkstationDTO implements Serializable{
     this.created_date = created_date;
   }
 
-  public int getUpdate_by() {
-    return update_by;
+  public int getUpdated_by() {
+    return updated_by;
   }
 
-  public void setUpdate_by(int update_by) {
-    this.update_by = update_by;
+  public void setUpdated_by(int updated_by) {
+    this.updated_by = updated_by;
   }
 
   public int getCreated_by() {
@@ -103,12 +103,12 @@ public class MWorkstationDTO implements Serializable{
     this.created_by = created_by;
   }
 
-  public String getUpdateByName() {
-    return updateByName;
+  public String getUpdatedByName() {
+    return updatedByName;
   }
 
-  public void setUpdateByName(String updateByName) {
-    this.updateByName = updateByName;
+  public void setUpdatedByName(String updatedByName) {
+    this.updatedByName = updatedByName;
   }
 
   public String getCreatedByName() {

@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by M Nurul Fikri on 07/01/2018
  */
 @Controller
-public class MUsersController {
+public class MUserController {
     @RequestMapping("/User/")
     public String userCreate(){
         return "userCreate";

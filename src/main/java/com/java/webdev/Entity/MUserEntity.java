@@ -7,8 +7,8 @@ import java.util.Date;
  * Created by M Nurul Fikri on 11/01/2018
  */
 @Entity
-@Table(name = "m_users", schema = "pos_db")
-public class MUsersEntity {
+@Table(name = "m_user", schema = "pos_db")
+public class MUserEntity {
     private int userId;
     private String address;
     private Integer createdBy;
@@ -18,7 +18,7 @@ public class MUsersEntity {
     private Date lastUpdate;
     private String password;
     private String position;
-    private Integer updateBy;
+    private Integer updatedBy;
     private String userName;
     private Integer workstationId;
 
@@ -113,13 +113,13 @@ public class MUsersEntity {
     }
 
     @Basic
-    @Column(name = "update_by")
-    public Integer getUpdateBy() {
-        return updateBy;
+    @Column(name = "updated_by")
+    public Integer getUpdatedBy() {
+        return updatedBy;
     }
 
-    public void setUpdateBy(Integer updateBy) {
-        this.updateBy = updateBy;
+    public void setUpdatedBy(Integer updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
     @Basic
@@ -147,7 +147,7 @@ public class MUsersEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        MUsersEntity that = (MUsersEntity) o;
+        MUserEntity that = (MUserEntity) o;
 
         if (userId != that.userId) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
@@ -158,7 +158,7 @@ public class MUsersEntity {
         if (lastUpdate != null ? !lastUpdate.equals(that.lastUpdate) : that.lastUpdate != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (position != null ? !position.equals(that.position) : that.position != null) return false;
-        if (updateBy != null ? !updateBy.equals(that.updateBy) : that.updateBy != null) return false;
+        if (updatedBy != null ? !updatedBy.equals(that.updatedBy) : that.updatedBy != null) return false;
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
         if (workstationId != null ? !workstationId.equals(that.workstationId) : that.workstationId != null)
             return false;
@@ -177,7 +177,7 @@ public class MUsersEntity {
         result = 31 * result + (lastUpdate != null ? lastUpdate.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (position != null ? position.hashCode() : 0);
-        result = 31 * result + (updateBy != null ? updateBy.hashCode() : 0);
+        result = 31 * result + (updatedBy != null ? updatedBy.hashCode() : 0);
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (workstationId != null ? workstationId.hashCode() : 0);
         return result;
